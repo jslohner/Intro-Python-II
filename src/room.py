@@ -8,4 +8,4 @@ class Room:
 		self.w_to = None
 
 	def __str__(self):
-		return f'Room Name - {self.name}\nRoom Description - {self.description}'
+		return f'Current Room Name - {self.name}\nCurrent Room Description - {self.description}'
