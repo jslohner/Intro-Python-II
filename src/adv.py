@@ -74,7 +74,7 @@ def commandParser(command, activePlayer):
 	elif command == 'ak':
 		printActions()
 	else:
-		print('\ninvalid command\n')
+		print('\ninvalid command - to see the action key input the command [ak]\n')
 
 def main():
 	print('Adventure Game')
@@ -85,11 +85,11 @@ def main():
 	while True:
 		print(activePlayer.currentRoom)
 
-		command = input('enter command for next action - ')
+		playerCommand = input('enter command for next action - ')
 
-		if (command == 'q') or (command == 'quit'):
+		if playerCommand == 'q':
 			break
-		commandParser(command, activePlayer)
+		commandParser(playerCommand, activePlayer)
 
 main()
 
