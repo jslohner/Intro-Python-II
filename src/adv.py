@@ -97,10 +97,12 @@ def commandParser(command, activePlayer):
 						item.onTake()
 						return
 					else:
-						print('\nto get an item make sure you type it the same way that it is shown in room items\n')
-				else:
-					print(f'\n{commandList[1]} not found in current room\n')
-					return
+						print(f'\nitem - {commandList[1]} not found, to get an item make sure you type it the same way that it is shown in room items\n')
+						return
+			print(f'\nitem - {commandList[1]} not found in current room\n')
+				# else:
+				# 	print(f'\n{commandList[1]} not found in current room\n')
+				# 	return
 		elif commandList[0] == 'drop':
 			for item in activePlayer.playerItems:
 				if commandList[1].lower() in item.name.lower():
@@ -165,5 +167,8 @@ def main():
 		if playerCommand == 'q':
 			break
 		commandParser(playerCommand, activePlayer)
+		if any(('chest-1' in item.name) or ('chest-2' in item.name) for item in activePlayer.playerItems):
+			print('the chest is actually a mimic, as you pick up the chest it emerges and kills you quickly. you died')
+			break
 
 main()
