@@ -3,10 +3,12 @@ class Room:
 		self.name = name
 		self.description = description
 		self.roomItems = []
-		self.n_to = None
-		self.s_to = None
-		self.e_to = None
-		self.w_to = None
 
 	def __repr__(self):
 		return f'Current Room Name - {self.name}\nCurrent Room Description - {self.description}\nCurrent Room Items - {self.roomItems}'
+
+	def addItem(self, item):
+		self.roomItems.append(item)
+
+	def removeItem(self, item):
+		self.roomItems.remove(item)
