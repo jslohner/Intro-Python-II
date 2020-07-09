@@ -2,10 +2,11 @@ class Room:
 	def __init__(self, name, description):
 		self.name = name
 		self.description = description
+		self.roomItems = []
 		self.n_to = None
 		self.s_to = None
 		self.e_to = None
 		self.w_to = None
 
 	def __repr__(self):
-		return f'Current Room Name - {self.name}\nCurrent Room Description - {self.description}'
+		return f'Current Room Name - {self.name}\nCurrent Room Description - {self.description}\nCurrent Room Items - {self.roomItems}'
