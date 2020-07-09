@@ -3,5 +3,5 @@ class Player:
 		self.name = name
 		self.currentRoom = currentRoom
 
-	def __str__(self):
+	def __repr__(self):
 		return f'Player Name - {self.name}\nCurrent Room - {self.currentRoom}'
